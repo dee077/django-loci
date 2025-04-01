@@ -1,7 +1,11 @@
 from django.conf import settings
 from django.utils.module_loading import import_string
 
-DefaultFileStorageClass = import_string(getattr(settings, 'DEFAULT_FILE_STORAGE'))
+DefaultFileStorageClass = import_string(
+    getattr(
+        settings, 'DEFAULT_FILE_STORAGE', 'django.core.files.storage.FileSystemStorage'
+    )
+)
 
 
 class OverwriteMixin:

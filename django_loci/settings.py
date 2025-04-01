@@ -10,6 +10,7 @@ DJANGO_LOCI_GEOCODE_RETRIES = getattr(settings, 'DJANGO_LOCI_GEOCODE_RETRIES', 3
 DJANGO_LOCI_GEOCODE_API_KEY = getattr(
     settings, 'DJANGO_LOCI_GEOCODE_GOOGLE_API_KEY', None
 )
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 FLOORPLAN_STORAGE = getattr(
     settings, 'LOCI_FLOORPLAN_STORAGE', 'django_loci.storage.OverwriteStorage'
 )
